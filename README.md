@@ -1,0 +1,2 @@
+# struts2_hibernate
+Hibernate与Struts2整合应用
