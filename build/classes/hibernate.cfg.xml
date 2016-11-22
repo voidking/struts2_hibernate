@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"D:\jar\hibernate\hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.password">tiger</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost/xscj</property>
+        <property name="hibernate.connection.username">scott</property>
+        <property name="hibernate.default_schema">xscj</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="show_sql">true</property>
+        <mapping resource="com/voidking/struts2_hibernate/model/Xsb.hbm.xml"/>
+        <mapping resource="com/voidking/struts2_hibernate/model/Kcb.hbm.xml"/>
+        <mapping resource="com/voidking/struts2_hibernate/model/Zyb.hbm.xml"/>
+        <mapping resource="com/voidking/struts2_hibernate/model/Dlb.hbm.xml"/>
+        <mapping resource="com/voidking/struts2_hibernate/model/XsKcb.hbm.xml"/>
+    </session-factory>
+</hibernate-configuration>

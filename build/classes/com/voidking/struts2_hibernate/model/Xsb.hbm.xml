@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-5-23 0:27:57 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.voidking.struts2_hibernate.model.Xsb" table="xsb">
+        <id name="xh" type="string">
+            <column name="xh" length="6" />
+            <generator class="assigned" />
+        </id>
+        <property name="xm" type="string">
+            <column name="xm" length="8" not-null="true" />
+        </property>
+        <property name="xb" type="boolean">
+            <column name="xb" not-null="true" />
+        </property>
+        <property name="cssj" type="timestamp">
+            <column name="cssj" length="19" />
+        </property>
+        <property name="zxf" type="java.lang.Integer">
+            <column name="zxf" />
+        </property>
+        <property name="bz" type="string">
+            <column name="bz" length="500" />
+        </property>
+        <property name="zp" type="binary">
+            <column name="zp" />
+        </property>
+        
+        <many-to-one name="zyb" class="com.voidking.struts2_hibernate.model.Zyb" fetch="select" cascade="all" lazy="false" insert="false" update="false">
+        	<column name="zy_id"></column>
+        </many-to-one>
+        
+        <set name="kcs" table="xs_kcb" lazy="false" cascade="save-update">
+        	<key column="xh"></key>
+        	<many-to-many class="com.voidking.struts2_hibernate.model.Kcb" column="kch"></many-to-many>
+        </set>
+    </class>
+</hibernate-mapping>

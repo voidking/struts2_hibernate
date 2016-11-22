@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-5-23 0:27:57 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.voidking.struts2_hibernate.model.Kcb" table="kcb">
+        <id name="kch" type="string">
+            <column name="kch" length="3" />
+            <generator class="assigned" />
+        </id>
+        <property name="kcm" type="string">
+            <column name="kcm" length="12" />
+        </property>
+        <property name="kxxq" type="java.lang.Short">
+            <column name="kxxq" />
+        </property>
+        <property name="xs" type="java.lang.Integer">
+            <column name="xs" />
+        </property>
+        <property name="xf" type="java.lang.Integer">
+            <column name="xf" />
+        </property>
+        <set name="xss" table="xs_kcb" lazy="true" inverse="true">
+        	<key column="kch"></key>
+        	<many-to-many class="com.voidking.struts2_hibernate.model.Xsb"></many-to-many>
+        </set>
+    </class>
+</hibernate-mapping>
